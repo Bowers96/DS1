@@ -1,0 +1,575 @@
+/**
+ *	Import modules styles.
+ */
+/**
+ * Site-wide variables.
+ */
+/* Sizing */
+/* Breakpoints */
+/* Colors */
+/* Fonts */
+body,
+p,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  padding: 0; }
+
+body {
+  margin-top: 120px; }
+
+html * {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif; }
+
+/**
+ * Site Header
+ */
+.header__content {
+  margin: 0 auto; }
+.header__img {
+  background-image: url(../images/ssofalaska-cover.png);
+  max-width: 100%;
+  height: 300px;
+  background-position: 91% 0%;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+@media (min-width: 700px) {
+  .header__img {
+    background-image: url(../images/ssofalaska-cover.png);
+    max-width: 100%;
+    height: 384px;
+    background-position: 91% 0%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%; } }
+/**
+ * Site Navigation
+ */
+.nav {
+  display: table;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  background-color: white; }
+  .nav--scrolled {
+    border-bottom: 1px solid #cdcdcd;
+    box-shadow: 0 0 10px gray; }
+  .nav__logo {
+    width: 125px;
+    margin-left: 60px;
+    float: left; }
+    .nav__logo img {
+      max-width: 100%; }
+  .nav__items {
+    display: none;
+    float: right;
+    transition: all 1s;
+    list-style: none;
+    padding-right: 20px;
+    transition: padding 0.3s; }
+  .nav__item {
+    display: inline-block;
+    padding: 0 10px;
+    position: relative; }
+    .nav__item a:hover {
+      color: #007FFF;
+      transition: color 0.3s; }
+    .nav__item > a:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: #007FFF;
+      visibility: hidden;
+      -webkit-transform: scaleX(0);
+      transform: scaleX(0);
+      -webkit-transition: all 0.3s ease-in-out 0s;
+      transition: all 0.3s ease-in-out 0s; }
+    .nav__item > a:hover:before {
+      visibility: visible;
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1); }
+  .nav__link {
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    font-family: "Open Sans", sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #003366;
+    font-weight: 700;
+    font-size: 14px; }
+
+@media (min-width: 700px) {
+  .nav {
+    transition: height 0.3s; }
+    .nav__logo {
+      width: 150px;
+      transition: width 0.3s; }
+    .nav__items {
+      display: block;
+      padding: 50px; }
+    .nav--slim .nav__logo {
+      width: 80px; }
+    .nav--slim .nav__items {
+      padding: 20px; } }
+@keyframes slideOut {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+    display: inline-block; }
+  to {
+    transform: translateX(1000%);
+    opacity: 0;
+    display: none;
+    height: 0; } }
+@keyframes slideIn {
+  from {
+    transform: translateX(1000%);
+    opacity: 0;
+    display: none;
+    height: 0; }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+    display: inline-block; } }
+@keyframes fadeIn {
+  from {
+    display: none;
+    opacity: 0; }
+  100% {
+    display: inline-block;
+    opacity: 1; } }
+/**
+ * Site Slider
+ */
+.slider {
+  padding: 40px 16px; }
+  .slider__wrap {
+    list-style: none; }
+  .slider__slide {
+    max-width: 500px;
+    margin: 0 auto;
+    border-bottom: 1px solid black;
+    box-shadow: 0 0 15px #676767;
+    line-height: 0; }
+    .slider__slide img {
+      width: 100%; }
+
+/**
+ * About Section
+ */
+.section {
+  min-height: 50vh;
+  width: 100%;
+  padding: 40px 20px;
+  background-color: white;
+  display: table; }
+  .section#map {
+    padding: 100px 20px; }
+  .section__header {
+    position: absolute;
+    left: 0;
+    top: -25px;
+    padding: 5px 10px 5px 0;
+    max-width: 960px;
+    background-color: white;
+    z-index: 1; }
+    .section__header--spacing {
+      margin-bottom: 40px; }
+  .section__top {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Fixed/sticky position */
+    bottom: 20px;
+    /* Place the button at the bottom of the page */
+    right: 30px;
+    /* Place the button 30px from the right */
+    z-index: 99;
+    /* Make sure it does not overlap */
+    border: none;
+    /* Remove borders */
+    outline: none;
+    /* Remove outline */
+    background-color: red;
+    /* Set a background color */
+    color: white;
+    /* Text color */
+    cursor: pointer;
+    /* Add a mouse pointer on hover */
+    padding: 15px;
+    /* Some padding */
+    border-radius: 10px;
+    /* Rounded corners */ }
+    .section__top:hover {
+      background-color: #555;
+      /* Add a dark-grey background on hover */ }
+  .section__wrapper {
+    display: inline-block;
+    margin: 0 auto;
+    width: 49%;
+    text-align: center; }
+  .section__content {
+    max-width: 960px;
+    margin: 0 auto;
+    position: relative; }
+    .section__content:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: -3px;
+      width: 100%;
+      height: 3px;
+      background-image: linear-gradient(to right, #99ccff 50%, transparent); }
+    .section__content--bleed {
+      max-width: 100%; }
+  .section__text {
+    padding-bottom: 20px;
+    line-height: 24px;
+    font-size: 14px;
+    color: #676767; }
+  .section__text--centered {
+    text-align: center; }
+  .section__about {
+    display: table;
+    position: relative;
+    margin-bottom: 35px;
+    padding: 15px;
+    text-align: center; }
+  .section__about-info {
+    margin: 0px auto;
+    line-height: 20px; }
+  .section__about-name {
+    margin: 0px auto 5px;
+    font-size: 24px;
+    font-weight: bold; }
+  .section__about-specialty {
+    margin: 0px auto 10px;
+    font-size: 18px;
+    color: gray; }
+  .section__about-img {
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    display: block;
+    border-radius: 50%; }
+  .section__content {
+    padding-top: 40px;
+    position: relative; }
+  .section__content-tile {
+    width: 100%;
+    overflow: auto;
+    margin-bottom: 20px;
+    position: relative; }
+  .section__content-list {
+    list-style: none; }
+    .section__content-list-header {
+      margin-bottom: 10px;
+      font-weight: 700;
+      padding: 2px 3px;
+      background-color: white; }
+    .section__content-list-item {
+      margin-bottom: 20px;
+      line-height: 22px;
+      font-size: 14px;
+      color: #676767; }
+    .section__content-list a {
+      color: #007FFF; }
+  .section__map-overlay {
+    background: transparent;
+    position: relative;
+    width: 100%;
+    height: 300px;
+    /* your iframe height */
+    top: 350px;
+    /* your iframe height */
+    margin-top: -300px;
+    /* your iframe height */ }
+  .section__map iframe {
+    width: 100%;
+    height: 300px;
+    margin: 50px 0 40px;
+    box-shadow: 0 0 15px #676767; }
+  .section__figure {
+    margin: 0;
+    padding: 0; }
+  .section__teammate {
+    margin: 0;
+    position: relative;
+    background: white;
+    width: 100%;
+    height: 350px; }
+  .section__kris {
+    display: block;
+    background-image: url(../images/kris-kile.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; }
+  .section__nametitle {
+    display: inline-table;
+    position: absolute;
+    left: 0px;
+    padding: 15px 25px;
+    background: rgba(20, 20, 20, 0.7) none repeat scroll 0% 0%;
+    color: #FFF;
+    bottom: 0px;
+    -webkit-font-smoothing: antialiased; }
+  .section__name {
+    font-family: "lubalin_graph_demiregular", Arial, sans-serif;
+    font-size: 13px;
+    width: auto; }
+  .section__title {
+    display: block;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 12px; }
+  .section__you {
+    text-align: center;
+    bottom: 38%;
+    background: transparent none repeat scroll 0% 0%;
+    margin: auto;
+    width: 100%; }
+  .section__figure {
+    margin: 0;
+    padding: 0; }
+  .section__teammate {
+    position: relative;
+    background: white;
+    width: 100%;
+    height: 350px; }
+  .section__kris {
+    display: block;
+    background-image: url(../images/kris.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; }
+  .section__kris:hover {
+    display: block;
+    background-image: url(../images/SSoA6.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 37%; }
+  .section__powers {
+    display: block;
+    background-image: url(../images/powers.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; }
+  .section__powers:hover {
+    display: block;
+    background-image: url(../images/powers-two.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 41%; }
+  .section__faerber {
+    display: block;
+    background-image: url(../images/Faerber-56.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 18%; }
+  .section__faerber:hover {
+    display: block;
+    background-image: url(../images/SSoA2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 18%; }
+  .section__ehmer {
+    display: block;
+    background-image: url(../images/ehmer.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 30%; }
+  .section__ehmer:hover {
+    display: block;
+    background-image: url(../images/ehmer-two.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 30%; }
+  .section__ferry {
+    display: block;
+    background-image: url(../images/ferry.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; }
+  .section__eklutna_pano_400 {
+    display: block;
+    width: 100%;
+    height: 600px;
+    background-image: url(../images/eklutna_pano_400.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 69%; }
+  .section__color {
+    display: inline-block; }
+  .section__nametitle {
+    display: inline-table;
+    position: absolute;
+    left: 0px;
+    padding: 15px 25px;
+    background: rgba(20, 20, 20, 0.7) none repeat scroll 0% 0%;
+    color: #FFF;
+    bottom: 0px;
+    -webkit-font-smoothing: antialiased; }
+  .section__name {
+    font-family: "lubalin_graph_demiregular", Arial, sans-serif;
+    font-size: 13px;
+    width: auto; }
+  .section__title {
+    display: block;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 12px; }
+  .section__you {
+    text-align: center;
+    bottom: 38%;
+    background: transparent none repeat scroll 0% 0%;
+    margin: auto;
+    width: 100%; }
+
+@media (min-width: 700px) {
+  .section__content-tile--full {
+    width: 100%; }
+  .section__content-tile--left, .section__content-tile--right {
+    float: left;
+    width: 49%; }
+  .section__content-tile--left {
+    margin-right: 2%; }
+  .section__content-list--split .section__content-list-item {
+    float: left;
+    width: 49%; }
+  .section__figure {
+    margin: 0;
+    padding: 0; }
+  .section__teammate {
+    position: relative;
+    background: white;
+    width: 33%;
+    height: 350px; }
+  .section__kris {
+    display: inline-block;
+    background-image: url(../images/kris.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; }
+  .section__kris:hover {
+    display: inline-block;
+    background-image: url(../images/SSoA6.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; }
+  .section__powers {
+    display: inline-block;
+    background-image: url(../images/powers.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; }
+  .section__powers:hover {
+    display: inline-block;
+    background-image: url(../images/powers-two.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; }
+  .section__faerber {
+    display: inline-block;
+    background-image: url(../images/Faerber-56.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 18%; }
+  .section__faerber:hover {
+    display: inline-block;
+    background-image: url(../images/SSoA2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 18%; }
+  .section__ehmer {
+    display: inline-block;
+    background-image: url(../images/ehmer.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 30%; }
+  .section__ehmer:hover {
+    display: inline-block;
+    background-image: url(../images/ehmer-two.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 30%; }
+  .section__ferry {
+    display: inline-block;
+    background-image: url(../images/ferry.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; }
+  .section__couple-hiking {
+    display: block;
+    width: 100%;
+    height: 686px;
+    background-image: url(../images/couple-hiking.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 69%;
+    background-attachment: fixed; }
+  .section__people-hiking {
+    display: block;
+    width: 100%;
+    height: 686px;
+    background-image: url(../images/people-hiking.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 69%;
+    background-attachment: fixed; }
+  .section__color {
+    display: inline-block; }
+  .section__nametitle {
+    display: inline-table;
+    position: absolute;
+    left: 0px;
+    padding: 15px 25px;
+    background: rgba(20, 20, 20, 0.7) none repeat scroll 0% 0%;
+    color: #FFF;
+    bottom: 0px;
+    -webkit-font-smoothing: antialiased; }
+  .section__name {
+    font-family: "lubalin_graph_demiregular", Arial, sans-serif;
+    font-size: 13px;
+    width: auto; }
+  .section__title {
+    display: block;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 12px; }
+  .section__you {
+    text-align: center;
+    bottom: 38%;
+    background: transparent none repeat scroll 0% 0%;
+    margin: auto;
+    width: 100%;
+    font-size: 20px; } }
+/**
+ * About Section
+ */
+.footer {
+  padding: 40px 0 60px; }
+  .footer__items {
+    list-style: none; }
+  .footer__item {
+    padding: 10px 0; }
+    .footer__item i {
+      margin-right: 10px;
+      font-size: 30px;
+      color: #003366; }
+    .footer__item a {
+      color: black; }
+
+@media (min-width: 700px) {
+  .footer__item:nth-child(odd) {
+    float: left;
+    margin-right: 20%;
+    width: 50%; } }
+
+/*# sourceMappingURL=main.css.map */

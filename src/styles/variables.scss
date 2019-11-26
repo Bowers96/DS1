@@ -1,0 +1,26 @@
+/**
+ * Site-wide variables.
+ */
+
+/* Sizing */
+$max-site-width: 960px;
+
+/* Breakpoints */
+$mid: 700px;
+
+/* Colors */
+$blue: #007FFF;
+$lightblue: lighten($blue, 30%);
+$darkblue: darken($blue, 30%);
+$red: lighten(red, 20%);
+$gray: gray;
+$purple: purple;
+$yellow: yellow;
+$lightgray: lighten($gray, 30%);
+$darkgray: darken($gray, 10%);
+$white: white;
+$earth-green: rgb(148, 218, 136);
+$black: black;
+
+/* Fonts */
+$open-sans: 'Open Sans', sans-serif;

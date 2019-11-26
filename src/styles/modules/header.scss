@@ -1,0 +1,36 @@
+/**
+ * Site Header
+ */
+
+$module-name: 'header';
+
+// .header {}
+.#{$module-name} {
+
+	&__content {
+		margin: 0 auto;
+	}
+
+	&__img {
+		background-image: url(../images/ssofalaska-cover.png);
+    max-width: 100%;
+    height: 300px;
+    background-position: 91% 0%;
+		background-repeat: no-repeat;
+    background-size: cover;
+	}
+}
+
+// Screens > 700px
+@media( min-width: $mid)  {
+	.#{$module-name} {
+		&__img {
+			background-image: url(../images/ssofalaska-cover.png);
+	    max-width: 100%;
+	    height: 384px;
+	    background-position: 91% 0%;
+			background-repeat: no-repeat;
+	    background-size: 100% 100%;
+		}
+	}
+}
