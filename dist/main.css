@@ -112,7 +112,7 @@ html * {
   .nav {
     transition: height 0.3s; }
     .nav__logo {
-      width: 150px;
+      width: 235px;
       transition: width 0.3s; }
     .nav__items {
       display: block;
