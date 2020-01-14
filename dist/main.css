@@ -32,7 +32,7 @@ html * {
 .header__content {
   margin: 0 auto; }
 .header__img {
-  background-image: url(../images/business-accounting.jpg);
+  background-image: url('https://imgur.com/waWGDNS');
   max-width: 100%;
   height: 300px;
   background-position: 91% 0%;
@@ -41,7 +41,7 @@ html * {
 
 @media (min-width: 700px) {
   .header__img {
-    background-image: url(../images/business-accounting.jpg);
+    background-image: url('https://imgur.com/waWGDNS');
     max-width: 100%;
     height: 384px;
     background-position: 91% 0%;
