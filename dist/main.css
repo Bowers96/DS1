@@ -63,9 +63,9 @@ html * {
   .nav__logo {
     width: 125px;
     margin-left: 60px;
-    float: left; }
-    .nav__logo img {
-      max-width: 100%; }
+    float: left;
+      max-width: 100%; 
+background-image: url('https://imgur.com/waWGDNS');}
   .nav__items {
     display: none;
     float: right;
@@ -113,6 +113,7 @@ html * {
     transition: height 0.3s; }
     .nav__logo {
       width: 235px;
+      background-image: url('https://imgur.com/waWGDNS');
       transition: width 0.3s; }
     .nav__items {
       display: block;
