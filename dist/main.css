@@ -186,9 +186,6 @@ html * {
   .section#map {
     padding: 100px 20px; }
   .section__header {
-    position: absolute;
-    left: 0;
-    top: -25px;
     padding: 5px 10px 5px 0;
     max-width: 960px;
     background-color: white;
