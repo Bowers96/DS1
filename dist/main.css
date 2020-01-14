@@ -120,6 +120,9 @@ background-image: url('https://i.imgur.com/waWGDNS.png');}
     .nav__items {
       display: block;
       padding: 50px; }
+  .nav--slim {
+  box-shadow: 0 4px 2px -2px grey;
+  }
     .nav--slim .nav__logo {
       width: 140px;
     height: 60px; }
