@@ -70,8 +70,6 @@ html * {
     height: 80px;
     background-size: cover;}
   .nav__items {
-    display: none;
-    float: right;
     transition: all 1s;
     list-style: none;
     padding-right: 20px;
