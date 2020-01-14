@@ -61,11 +61,12 @@ html * {
     border-bottom: 1px solid #cdcdcd;
     box-shadow: 0 0 10px gray; }
   .nav__logo {
-    width: 125px;
-    margin-left: 60px;
+        width: 38%;
     float: left;
-      max-width: 100%; 
-background-image: url('https://i.imgur.com/waWGDNS.png');}
+    max-width: 100%;
+    background-image: url(https://i.imgur.com/waWGDNS.png);
+    height: 60px;
+    background-size: cover;
   .nav__items {
     display: none;
     float: right;
