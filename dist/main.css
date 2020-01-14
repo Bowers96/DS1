@@ -64,7 +64,7 @@ html * {
   }
   .nav__logo {
         width: 50%;
-    margin: 0 auto;
+    margin: 0 auto 10px auto;
     max-width: 100%;
     background-image: url(https://i.imgur.com/waWGDNS.png);
     height: 80px;
