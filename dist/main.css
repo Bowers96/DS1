@@ -365,16 +365,11 @@ html * {
     background-position: center 37%; }
   .section__powers {
     display: block;
-    background-image: url(../images/powers.jpg);
+    background-image: url(../images/musa-photo.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center; }
-  .section__powers:hover {
-    display: block;
-    background-image: url(../images/powers-two.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center 41%; }
+  
   .section__faerber {
     display: block;
     background-image: url(../images/Faerber-56.jpg);
