@@ -112,14 +112,17 @@ background-image: url('https://i.imgur.com/waWGDNS.png');}
   .nav {
     transition: height 0.3s; }
     .nav__logo {
-      width: 235px;
+      width: 280px;
       background-image: url('https://i.imgur.com/waWGDNS.png');
-      transition: width 0.3s; }
+      transition: width 0.3s;
+  background-size: cover;
+    height: 118px;}
     .nav__items {
       display: block;
       padding: 50px; }
     .nav--slim .nav__logo {
-      width: 80px; }
+      width: 140px;
+    height: 60px; }
     .nav--slim .nav__items {
       padding: 20px; } }
 @keyframes slideOut {
